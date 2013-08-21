@@ -1,0 +1,31 @@
+{
+    "name": "spiffy/zf2-custom-skeleton",
+
+    "require": {
+        "php": ">=5.3.3",
+
+        "rwoverdijk/assetmanager": "1.*",
+
+        "spiffy/spiffy-config": "0.*",
+        "spiffy/spiffy-navigation": "0.*",
+
+        "zendframework/zend-config": "2.*",
+        "zendframework/zend-console": "2.*",
+        "zendframework/zend-developer-tools": "0.*",
+        "zendframework/zend-form": "2.*",
+        "zendframework/zend-http": "2.*",
+        "zendframework/zend-loader": "2.*",
+        "zendframework/zend-modulemanager": "2.*",
+        "zendframework/zend-mvc": "2.*",
+        "zendframework/zend-serializer": "2.*",
+        "zendframework/zend-text": "2.*",
+        "zendframework/zend-view": "2.*",
+
+        "zf-commons/zfc-twig": "dev-1.2rc1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Application": "module/Application/src/"
+        }
+    }
+}

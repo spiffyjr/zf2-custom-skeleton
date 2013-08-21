@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ZF2 Skeleton Application</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        {# This block is required for any ZF2 view helpers that use headMeta() #}
+        {# Twig templates should put their scripts directly in the headMeta block #}
+        {{ headMeta() }}
+        {% block headMeta %}
+        {% endblock headMeta %}
+
+        <link href="/css/site.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+        {# This block is required for any ZF2 view helpers that use headLink() #}
+        {# Twig templates should put their scripts directly in the headLink block #}
+        {{ headLink() }}
+        {% block headLink %}
+        {% endblock headLink %}
+
+        <!--[if lt IE 9]><script type="text/javascript" src="/js/ie9.min.js"></script><![endif]-->
+        <script type="text/javascript" src="/js/site.min.js"></script>
+
+        {# This block is required for any ZF2 view helpers that use headScript() #}
+        {# Twig templates should put their scripts directly in the headScript block #}
+        {{ headScript() }}
+        {% block headScript %}
+        {% endblock headScript %}
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url('home') }}">Skeleton Application</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    {{ navigationMenu().renderMenu('default', { ulClass: 'nav navbar-nav' }) | raw }}
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            {% block content %}
+            {# Echo of content is required for proper fallback to .phtml if a .twig template is not available #}
+            {{ content | raw }}
+            {% endblock content %}
+            <hr>
+            <footer>
+                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. All rights reserved. </p>
+            </footer>
+        </div> <!-- /container -->
+
+        {# This block is required for any ZF2 view helpers that use inlineScript() #}
+        {# Twig templates should put their scripts directly in the inlineScript block #}
+        {{ inlineScript() }}
+        {% block inlineScript %}
+        {% endblock inlineScript %}
+
+    </body>
+</html>
